@@ -16,7 +16,7 @@ class CategoryController extends Controller
 
         return response()->json([
             'status'=>200,
-            'products'=>$categories
+            'categories'=>$categories
         ]);
     
     }
@@ -79,6 +79,6 @@ public function show($id){
 
         $category->delete();
 
-        return response()->json(['message' => 'Category deleted successfully'], 200);
+        return response()->json(['message' => 'Category deleted successfully','status'=>200]);
     }
 }
